@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    background-color: coral;
+    box-shadow: 4px 4px 8px violet;
+    height: 35px;
+    width: 175px;
+    margin: 20px auto;
+}
+#container{
+    height: 500px;
+    width: 50%;
+    margin: 10px auto;
+    border: 5px solid steelblue;
+    background-color:antiquewhite;
+    text-align: center;
+    /* using flexbox properties */
+    display: flex; 
+    flex-direction: column;
+   /* justify-content: center;  */
+    /* justify-content used for justifying or declaring space of elements in a flexbox */
+    /* justify-content: space-around;
+   justify-content: space-between;
+   justify-content: space-evenly;  */
+   /* flex-wrap: wrap; */
+   /* align-items: flex-start; */
+   /* align-content: flex-start; */
+
+
+}
+#container div{
+    /* height: 45px;
+    width: 150px; */
+    color: azure;
+    
+}
+#blue{
+/* flex-basis: 132px; */
+flex-shrink: 1;
+flex-grow: 1.45;
+}
+#orange{
+    font-size: 25px;
+    /* flex-basis: 300px; */
+    flex-grow: 1.5;
+}

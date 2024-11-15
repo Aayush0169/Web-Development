@@ -1,0 +1,43 @@
+body{  background-color:  rgb(151, 231, 225)
+}
+
+div{
+    height: 250px;
+    width: 250px;
+    border: 10px solid red;
+    padding: 10px 20px 30px ;
+}
+/* border shorthand :-
+defining these border properties in a single line
+border: 6.8px dashed blue;  */
+h1
+{
+    color: green;
+    text-align: center;
+    border: 4px solid goldenrod;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    
+   
+    
+}
+#mydiv{
+    color: maroon;
+    text-align:center;
+    height: 100px;
+    width: 100px;
+    border: 15px solid goldenrod;
+    border-radius: 10% / 50%;
+    padding: 20px;
+}
+button{
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    height: 40px;
+    width: 70px;
+    border: 10px solid rgb(13, 206, 227);
+    border-radius: 40px;
+    padding: 0px;
+}

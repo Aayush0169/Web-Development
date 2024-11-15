@@ -1,0 +1,39 @@
+/* selectors */
+#maintopic{
+    color: blue;
+}
+*{
+    text-align: center;
+}
+.heading{
+    font-family: georgia;
+}
+.para{
+    color: white;
+    background-color: cornflowerblue;
+}
+div>button{
+    color: azure;
+    background-color: purple;
+}
+/* Pseduo class and elements */
+button:hover{
+    color: blue;
+    background-color: yellow;
+}
+p:nth-of-type(odd){
+    color: yellow;
+}
+h1::first-letter{
+    color: red;
+}
+#yes:checked+label{
+    color: darkgreen;
+    background-color: cornsilk;
+}
+/*
+pecifity of #mainContent=100  
+pecifity of div.main=11
+pecifity of .main=10
+specifity of h1=1
+*/

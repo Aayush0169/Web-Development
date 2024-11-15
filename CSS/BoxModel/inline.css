@@ -1,0 +1,53 @@
+div{
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+/* .div{
+   margin: 20px;
+} */
+span{
+    background-color: azure;
+    height: 200px;
+    width: 400px;
+    padding: 50px;
+    border: 4.5px solid brown;
+
+}
+p{
+    height: 300px;
+    width: 400px;
+    background-color: cornsilk;
+}
+
+#div1{
+    background-color: #f25529;
+    margin: 1px;
+    margin-bottom: 15px;
+}
+#div2{
+background-color: #83bc08;
+margin-left: 0px;
+}
+#div3{
+background-color: #08a7f0;
+margin-top: 15px;
+}
+#div4{
+background-color: #ffbb08;
+margin-top: 15px;
+}
+.divup{
+    margin: 15px;
+}
+#top{
+    margin-top: 15px;
+}
+     /* display: none; to hide an element from web page 
+     }
+units in CSS
+Percentages (%):-
+It is often used to define a size as relative to an element's parent object.
+eg:
+width : 33.33% II relative to the parent
+margin-left : 50% llrelative to the parent size */

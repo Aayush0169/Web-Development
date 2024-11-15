@@ -1,0 +1,25 @@
+.box{
+    height: 200px;
+    width: 250px;
+    border: 4px double deepskyblue;
+    background-color: blanchedalmond;
+    margin: 15px auto;
+    text-align: center;
+}
+header{
+    width: 500px;
+    height: 142px;
+    margin: 25px auto;
+}
+#one{
+    background-color:blue;
+    position: relative;
+    z-index: 1;
+
+}
+#two{
+    background-color: chocolate;
+    position: relative;
+    bottom: 90px;
+    z-index: 2;
+}

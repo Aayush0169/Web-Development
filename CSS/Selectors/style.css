@@ -1,0 +1,130 @@
+/* Universal Selector */
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+/* element selector */
+h3{
+    color: #49f60b;
+}
+h1{
+    color: aquamarine !important;
+}
+
+/* id selector */
+#login{
+    background-color: rgb(218, 52, 52);
+    color: white;
+}
+#signup{
+    background-color: #b24f39e2;
+    color: black;
+}
+/* class selector */
+.upvote{
+    color: #e79626;
+}
+
+
+/* descendent Selector (for selecting tags inside a tag) */
+p a{
+    text-decoration: none;
+    color: #9c7456;
+    background-color: #21c319;
+}
+nav ul li {
+    color: rgb(198, 198, 26);
+   }
+   nav ul li a{
+    color:rgb(91, 87, 16);
+   }
+
+
+   /* Adjacent Sibling Combinator (for adding style on a tag with
+    same hirearchy level and use just after that tag) using'+' */
+    p+h3{
+        color: rgb(35, 77, 214);
+    }
+.upvote+button{
+    text-decoration: wavy underline;
+    color: rgb(101, 103, 126);
+}
+
+/* Child Combinator (for adding style
+ on the tags come under other tag) using'>' tag */
+ div>input{
+    background-color: rgb(237, 205, 24);
+ }
+
+ /* Attribute Selector  */
+input[type="text"]{
+    color: rgb(53, 34, 9);
+}
+input[type="password"]{
+    color: rgb(14, 11, 185);
+}
+input[type]{
+    background-color: ghostwhite;
+}
+
+/* Pseudo Class
+A Keyword added to a selector that specifies a special state of the selected element(s) */
+
+/* Use of Hover  */
+button:hover{
+    background-color: rgb(176, 140, 140);
+    color: rgb(0, 0, 0);
+}   
+h3:hover{
+   color: black;
+    background-color: grey;
+}
+ /* use of active(while clicking)  */
+ p:active{
+    font-weight: 800;
+    color: aqua;
+    
+ }
+ #para:hover{
+    color: gray;
+ }
+
+ /* use of :checked property (used in chekbox/radio) */
+ input[type="radio"]:checked+label{
+    color: burlywood;
+    font-weight: bolder;
+ }
+ 
+ /* Pseudo Elements
+A Keyword added to a selector that lets you style a specific part of the selected element(s)
+:: first-letter
+::first-line
+::selection */
+ 
+/* first Letter */
+h1::first-letter{
+    color: rgb(203, 30, 160);
+}
+/* first-line */
+
+#para::first-line{
+    background-color: rgb(91, 102, 141);
+}
+/* :::selection */
+#para::selection{
+    background-color: rgb(65, 193, 37);
+    text-transform:uppercase;
+}
+/* 
+Cascading StyleSheets
+css :
+What is cascade in CSS?
+The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values
+for CSS properties . */
+/* 
+Selector Specificity
+What is specificity?
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. 
+PRIORITY OF SELECTORS:
+inline CSS >id>class>element
+
+*/

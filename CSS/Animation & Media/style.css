@@ -1,0 +1,32 @@
+.box{
+    height: 100px;
+    width: 200px;
+    margin: 20px auto;
+    background-color:#FDCEDF ;
+    /* animation-name: fontanimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.2s;
+    animation-iteration-count: 4;
+    animation-direction: normal; */
+    animation: width 3.5s ease-in 0.1s 4 normal;
+}
+
+
+
+@keyframes width{
+   from {
+    width: 5px;
+    font-size: 20px;
+    background-color: #FDCEDF;
+    }
+    to
+    {
+        width: 400px;
+        font-weight: bolder;
+        font-size: 40px;
+        text-align: center;
+        background-color: #A0153E;
+        color: rgb(255, 255, 255);
+    }
+}

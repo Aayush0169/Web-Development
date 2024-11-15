@@ -1,0 +1,31 @@
+.parent{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(255, 230, 2);
+    border-radius: 50%;
+}
+.mouth{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    height: 75px;
+    width: 200px;
+    background-color: rgb(165, 42, 42);
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+.eye{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#eye2{
+    left: 250px;
+}
