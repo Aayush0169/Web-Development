@@ -12,7 +12,7 @@ function printPoem(){
     console.log("Each Pray’r Accepted, And Each Wish Resign’d");
     console.log("___Ayush");
 }
-printPoem();
+console.log("type printPoem() to see a poem");
 console.log("A dice roll:");
 function diceRoll(){
     console.log(Math.floor(Math.random()*6)+1);
@@ -147,3 +147,36 @@ const arro= (a,b) => {
 function def(a,b=4){
     return a+b;
 }
+
+
+
+//Asynchronised function: using "Promise" object
+
+function saveDb(data){
+    return new Promise((resolve,reject) =>{
+        let speed=Math.floor(Math.random()*10);
+        if(speed>=4){
+        resolve("saved");    
+        }
+        else{
+        reject("slow speed");
+        }
+    })
+    }
+    
+    saveDb("xyz")
+    .then( ()=>{
+        console.log(` the data is saved`);
+        return saveDb()
+        .then(()=>{
+            console.log("data 2 is saved");
+        })
+        .catch(()=>{
+            console.log("unfortunately the second data coudn't be saved")
+    
+        })
+    })
+    .catch(()=>{
+        console.log("unfortunately the data coudn't be saved")
+    
+    })
