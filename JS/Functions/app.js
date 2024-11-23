@@ -156,27 +156,32 @@ function saveDb(data){
     return new Promise((resolve,reject) =>{
         let speed=Math.floor(Math.random()*10);
         if(speed>=4){
-        resolve("saved");    
+        resolve("fullfiled");    
         }
         else{
-        reject("slow speed");
+        reject("failiure,because of slow internet ");
         }
     })
     }
     
     saveDb("xyz")
-    .then( ()=>{
+    .then( (result)=>{
         console.log(` the data is saved`);
+        console.log("result of promise: ",result);
+
         return saveDb()
-        .then(()=>{
+        .then((result)=>{
             console.log("data 2 is saved");
+            console.log("result of promise: ",result);
         })
-        .catch(()=>{
-            console.log("unfortunately the second data coudn't be saved")
+        .catch((error)=>{
+            console.log("unfortunately the second data coudn't be saved");
+            console.log("result of promise: ",error);
     
         })
     })
-    .catch(()=>{
-        console.log("unfortunately the data coudn't be saved")
+    .catch((error)=>{
+        console.log("unfortunately the data coudn't be saved");
+        console.log("result of promise: ",error);
     
     })
