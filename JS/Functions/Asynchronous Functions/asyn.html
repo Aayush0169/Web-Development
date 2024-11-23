@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Functions</title>
+</head>
+<h1>Asynchronous Functions</h1>
+<body>
+    <script>
+        
+//Asynchronised function: using "Promise" object
+
+function saveDb(data){
+    return new Promise((resolve,reject) =>{
+        let speed=Math.floor(Math.random()*10);
+        if(speed>=4){
+        resolve("fullfiled");    
+        }
+        else{
+        reject("failiure,because of slow internet ");
+        }
+    })
+    }
+    
+    saveDb("xyz")
+    .then( (result)=>{
+        console.log(` the data is saved`);
+        console.log("result of promise: ",result);
+
+        return saveDb()
+        .then((result)=>{
+            console.log("data 2 is saved");
+            console.log("result of promise: ",result);
+        })
+        .catch((error)=>{
+            console.log("unfortunately the second data coudn't be saved");
+            console.log("result of promise: ",error);
+    
+        })
+    })
+    .catch((error)=>{
+        console.log("unfortunately the data coudn't be saved");
+        console.log("result of promise: ",error);
+    
+    })
+
+    //using "async" and "await"
+    let h=document.querySelector("h1");
+function colorChange(color,delay){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            if(Math.floor(Math.random()*10)>=7){
+                reject("Promise rejected")
+            }
+            h.style.color=color;
+            resolve()
+        }, delay);
+    
+    })
+}
+let colors=async function (){
+    await colorChange("#7EA04D",1000)
+    await colorChange("#884A39",1000)
+    await colorChange("#FFC107",1000)
+    await colorChange("#FF6BD6",1000)
+}
+colors();
+
+    </script>
+</body>
+</html>
