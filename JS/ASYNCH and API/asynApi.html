@@ -67,6 +67,20 @@ let colors=async function (){
 }
 colors();
 
+//fetching an API
+let link="https://catfact.ninja/fact";
+async function fact(){
+   try
+    { let res=await fetch(link);
+    let data=await res.json();
+    console.log(data.fact);
+}
+catch(e){
+    console.log(e);
+}
+    
+}
+
     </script>
 </body>
 </html>
