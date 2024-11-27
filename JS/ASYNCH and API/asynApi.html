@@ -6,7 +6,11 @@
     <title>Asynchronous Functions and API</title>
 </head>
 <h1>Asynchronous Functions and API</h1>
+<h2>Click on buttnon to see a fact about cats</h2>
+<button>Fact Generator</button>
+<p></p>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script>
         
 //Asynchronised function: using "Promise" object
@@ -67,6 +71,7 @@ let colors=async function (){
 }
 colors();
 
+
 //fetching an API
 let link="https://catfact.ninja/fact";
 async function fact(){
@@ -78,8 +83,23 @@ async function fact(){
 catch(e){
     console.log(e);
 }
-    
 }
+//Using Axios:
+async function newFact() {
+    try
+    {
+    let result= await axios.get(link);
+    let fact=result.data.fact;
+    return fact;
+    }
+    catch(e){
+        console.log("Coudn't find error bcz, ",e);
+    }
+    }
+    document.querySelector("button").addEventListener("click",async ()=>{
+        document.querySelector("p").innerText= await newFact(); 
+    })
+
 
     </script>
 </body>
