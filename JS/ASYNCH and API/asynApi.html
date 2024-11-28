@@ -9,6 +9,9 @@
 <h2>Click on buttnon to see a fact about cats</h2>
 <button>Fact Generator</button>
 <p></p>
+<p id="joke">Click me and see a joke</p>
+<button id="imgBtn" style="position: absolute;">Click me to see a Dog</button>
+<img>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script>
@@ -100,7 +103,28 @@ async function newFact() {
         document.querySelector("p").innerText= await newFact(); 
     })
 
+//Api that gives random dog's images
+let dogUrl="https://dog.ceo/api/breeds/image/random";
+async function dogImg(){
+    let res=await  axios.get(dogUrl);
+    let xyz=res.data.message;  
+    document.querySelector("img").src= xyz;
+    console.log(xyz);
+}
+document.querySelector("#imgBtn").addEventListener("click",dogImg);
 
+
+    //passing header with api
+let jokeUrl="https://icanhazdadjoke.com/";
+async function getJoke(){
+    const head={headers:{Accept:"text/plain"}};
+    let res=await axios.get(jokeUrl,head);
+    console.log(res.data);
+    return res.data;
+}
+document.querySelector("#joke").addEventListener("click",async()=>{
+    document.querySelector("#joke").innerText= await getJoke();
+})
     </script>
 </body>
 </html>
