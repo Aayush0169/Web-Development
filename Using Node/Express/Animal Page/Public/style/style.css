@@ -1,0 +1,14 @@
+body{
+    background-color: palevioletred;
+}
+img{
+    height: 150px;
+    width: 190px;
+}
+p{
+    color: white;
+}
+h2{
+    margin-top: 25px;
+    text-align: center;
+}
