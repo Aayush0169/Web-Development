@@ -1,0 +1,20 @@
+{
+  "name": "sql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ayush",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mysql2": "^3.12.0",
+    "node": "^23.7.0",
+    "sql": "^0.78.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0"
+  }
+}
