@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chit Chat</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h2>ALL CHATS</h2>
+    <form method="get" action="/chats/new">
+        <button>new chat</button>
+        <style> form button{
+            background-color:rgb(153, 240, 211);
+            border-radius: 7%;
+        }</style>
+    </form>
+
+   <% for(chat of chats){ %> 
+        <div>
+            <p id="from"><i><b>From:</b></i> <%= chat.from %> </p>
+            <p id="to"><i><b>TO:</b></i> <%= chat.to %> </p>
+            <div class="msg">
+                <p id="msg">message: <%= chat.message %> </p>
+                <form action="/chats/<%= chat._id %>/edit" method="get">
+                    <button id="edit">Edit</button>
+                </form>
+                <form action="/chats/<%= chat._id %>" method="get">
+                    <button id="edit">Show</button>
+                </form>
+                <form action="/chats/<%= chat._id %>?_method=DELETE" method="post">   
+                    <button>delete</button>
+                </form>
+            </div>
+            <p><b>Time:</b> <%= chat.time.toString().split(" ")[4] %></p>
+            <p><b>Date:</b> <%= chat.time.toString().split(" ").slice(1,4).join() %></p>
+        </div>
+    <%}%>
+        <style>
+            body{background-color: rgb(192, 239, 223);}
+            div{
+                height: auto;
+                width: auto;
+                background-color: aliceblue;
+                margin: 4px 4px 4px 4px;
+                border: 3px solid black;
+                border-radius: 5%;
+                display: inline-block;
+            }
+            .msg{
+                background-color: aquamarine;
+                color: rgb(170, 21, 212);
+                padding: 5px 7px;
+                border-radius: 9%;
+            }
+            #edit{
+                background-color: rgb(140, 224, 196);
+            }
+        </style>
+
+</body>
+</html>
