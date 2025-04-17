@@ -1,20 +1,19 @@
+//router file for posts route
 const express=require("express");
 const router=express.Router();
 
-
-//user route
-//index
+//post route
+//index route
 router.get("/",(req,res)=>{
-    res.send("Get user request");
+    res.send("Post get  received! ");
 })
-
-//user show
+//show post
 router.get("/:id",(req,res)=>{
-    res.send("Hii , ssup");
+    res.send("get post id  post");
 })
-//update user
+//update post
 router.put("/:id",(req,res)=>{
-    res.send("updated");
+    res.send("edit this post");
 })
 
 module.exports=router;
