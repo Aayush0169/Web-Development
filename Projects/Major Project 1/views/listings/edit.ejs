@@ -1,0 +1,65 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Edit Your Listing: </h3>
+    <div class="row">
+      <div class="col-8 offset-2">
+    <form method="post"
+     action="/listings/<%= listing._id %>?_method=PUT"
+      novalidate 
+      class="needs-validation" >
+        <div class="mb-3">
+          <label for="title">Title:</label>
+        <input type="text"
+         class="form-control"
+         name="listing[title]" 
+         value="<%= listing.title %>" required>
+         <div class="invalid-feedback">Title is required</div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="description">Description:</label>
+          <textarea  required name="listing[description]" 
+          class="form-control"
+          id="description" 
+          rows="6" cols="15"><%= listing.description %></textarea>
+          <div class="invalid-feedback">Description is required</div>
+        </div>
+        
+        <div class="mb-3"> 
+          <label for="image">Image Source:</label>
+          <input value="<%= listing.image %>" 
+          class="form-control"
+          type="text"
+          name="listing[image]" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="price">Price:</label>
+          <input  value="<%= listing.price %>"
+          type="number"
+          class="form-control"
+          name="listing[price]" required>
+          <div class="invalid-feedback">price is required</div>
+        </div>
+        
+        <div class="row">
+            
+          <div class="mb-3 col-md-4" required>
+              <label for="location">Enter location </label>
+              <input class="form-control" type="text" name="listing[location]" required>
+              <div class="invalid-feedback">Location is required</div>
+              
+          </div>
+          
+          <div class="mb-3 col-md-8">
+              <label for="country">Enter country</label>
+              <input class="form-control" type="text" name="listing[country]" required>
+              <div class="invalid-feedback">Enter the name of country</div>
+  
+          </div>
+      </div>
+        <button class="btn btn-dark add-btn">Update</button>
+    </form>
+    </div>
+    </div>
+</body>
