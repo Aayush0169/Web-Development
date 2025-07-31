@@ -54,6 +54,9 @@ app.use(flash());
 app.get("/",(req,res)=>{
     res.redirect("/listings");
 })
+app.get("/home",(req,res)=>{
+    res.redirect("/listings");
+})
 app.get("/listing",(req,res)=>{
     res.redirect("/listings");
 })

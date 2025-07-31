@@ -21,20 +21,21 @@ const listingController=require("../controllers/listing.js");
  .get(wrapAsync(listingController.index))
  .post(
         upload.single('listing[image]'), 
-      //   isLoggedin,                      
-      //   validateListing,                
+        isLoggedin,                      
+        validateListing,                
         wrapAsync(listingController.create)
     )
 
  //new route
  router.get("/new",
-   //  isLoggedin,
+    isLoggedin,
     listingController.newForm)
 
  //show, update, & delete route
  router.route("/:id")
  .get(wrapAsync(listingController.show))
  .put(
+    upload.single('listing[image]'),
     validateListing,
     wrapAsync(listingController.update)
  )
