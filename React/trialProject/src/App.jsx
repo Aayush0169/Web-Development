@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+// import {Description,Title} from './Description'
+import Movie from './Movie'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  return<>
+    {/* <Title/>
+    <Description/> */}
+    <Movie title="Fantastic 4" releaseDate={2025} source={"src/Posters/f4.jpg"}/>
+    <Movie title="The Northman" releaseDate={2022} source={"src/Posters/northman.jpg"}/>
+    <Movie title="F1" releaseDate={2025} source={"src/Posters/f1.jpg"}/>
+    <Movie title="Dune" releaseDate={2024} source={"src/Posters/dune.png"}/>
+    <Movie title="The Superman" releaseDate={2025} source={"src/Posters/superman.jpg"}/>
+    <Movie title="Inglourious Basterds" releaseDate={2009} source={"src/Posters/ing.jpg"}/>
+   </>
 }
 
 export default App
