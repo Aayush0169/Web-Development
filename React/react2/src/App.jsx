@@ -2,17 +2,15 @@
 import './App.css'
 import Counter from './counter'
 import LikeBtn from './likeBtn'
+import Lottery from './lottery'
 
-function doSomething(){
-  console.log("clicked")
-}
+
+
+
 function App() {
   return (
     <div>
-      <h2>React States</h2>
-      <Counter/>
-      <LikeBtn/>
-
+      <Lottery n={4} winningSum={16}/>
     </div>
   )
 }

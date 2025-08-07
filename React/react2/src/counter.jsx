@@ -7,6 +7,7 @@ export default function Counter(){
         setCount(count+1);
     }
     return<>
+    <h2>React States</h2>
     <h2>Count={count}</h2>
     <button onClick={increaseCount}>Click me 😎</button>
     </>
