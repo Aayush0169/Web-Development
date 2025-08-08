@@ -3,10 +3,10 @@ import './lottery.css'
 import { generateTicket,sumOfArr } from "./helper"
 import Ticket from "./Ticket";
 
-export default function Lottery({n=3,winningSum=15}){
+export default function Lottery({n=3,winCondition}){
 
     let [ticket,setTicket]=useState(generateTicket(n));
-    let isWinning=sumOfArr(ticket)==winningSum;
+    let isWinning=winCondition(ticket);
 
     let newTicket=()=>{
         setTicket(generateTicket(n));
